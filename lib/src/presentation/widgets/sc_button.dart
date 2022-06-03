@@ -16,11 +16,13 @@ class ScButton extends StatelessWidget {
   }) : super(key: key);
 
   MaterialStateProperty<EdgeInsetsGeometry?>? paddingBtn() {
-    return MaterialStateProperty.all(
-      const EdgeInsets.all(
-        16,
-      ),
-    );
+    if (!loading) {
+      return MaterialStateProperty.all(
+        const EdgeInsets.all(
+          16,
+        ),
+      );
+    }
   }
 
   @override
@@ -32,13 +34,6 @@ class ScButton extends StatelessWidget {
         padding: paddingBtn(),
         shadowColor: MaterialStateProperty.all(Colors.transparent),
         elevation: MaterialStateProperty.all(0),
-        // foregroundColor: MaterialStateProperty.resolveWith<Color>(
-        //     (Set<MaterialState> states) {
-        //   if (states.contains(MaterialState.hovered)) {
-        //     return appliedType.onPrimaryColor;
-        //   }
-        //   return appliedType.primaryColor;
-        // }),
         splashFactory: NoSplash.splashFactory,
         backgroundColor: MaterialStateProperty.all(
           disabled ? const Color(0xffE6E6E6) : AppColors.primary,

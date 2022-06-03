@@ -388,7 +388,7 @@ class _ScInputTextState extends State<ScInputText> {
     if (validText != null) {
       // has error
       return Container(
-        margin: EdgeInsets.only(right: 2, top: 4, bottom: 4),
+        margin: const EdgeInsets.only(right: 2, top: 4, bottom: 4),
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
         child: Icon(
           PhosphorIcons.x_circle_fill,
@@ -401,10 +401,10 @@ class _ScInputTextState extends State<ScInputText> {
     if (widget.suffix == null) return null;
 
     return Container(
-      margin: EdgeInsets.only(right: 2, top: 4, bottom: 4),
+      margin: const EdgeInsets.only(right: 2, top: 4, bottom: 4),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
       child: Material(
-        color: Color(0xffffffff),
+        color: const Color(0xffffffff),
         // color: AppColors.primaryWhite.withOpacity(0),
         textStyle: AppStyles.paragraph,
         child: widget.isSuffixIcon != true
