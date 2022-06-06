@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scheduling_app/src/presentation/pages/home/view/home_page.dart';
+import 'package:scheduling_app/src/presentation/pages/login/view/login_page.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class App extends StatelessWidget {
       // darkTheme: ThemeData(
       //   brightness: Brightness.dark,
       // ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }

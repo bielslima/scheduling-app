@@ -70,7 +70,7 @@ class _FormLogin extends StatelessWidget {
               height: 16,
             ),
             ScButton(
-              loading: true,
+              loading: false,
               child: const Text('Entrar'),
               onTap: () {
                 if (!_key.currentState!.validate()) return;

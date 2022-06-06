@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:scheduling_app/src/presentation/pages/home/view/widgets/header.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -24,6 +25,11 @@ class _HomePageState extends State<HomePage> {
                   child: FadeInAnimation(child: widget),
                 ),
                 children: [
+                  TextButton(
+                    onPressed: () => Navigator.pop(context),
+                    child: const Text('Back'),
+                  ),
+                  const Header(),
                   EmptyCard(
                     width: MediaQuery.of(context).size.width,
                     height: 166.0,
@@ -59,6 +65,26 @@ class _HomePageState extends State<HomePage> {
                     width: MediaQuery.of(context).size.width,
                     height: 166.0,
                   ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    child: Row(
+                      children: [
+                        const Flexible(child: EmptyCard(height: 50.0)),
+                        const Flexible(child: EmptyCard(height: 50.0)),
+                        const Flexible(child: EmptyCard(height: 50.0)),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    child: Row(
+                      children: [
+                        const Flexible(child: EmptyCard(height: 50.0)),
+                        const Flexible(child: EmptyCard(height: 50.0)),
+                        const Flexible(child: EmptyCard(height: 50.0)),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -68,7 +94,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
 
 class EmptyCard extends StatelessWidget {
   final double? width;
